@@ -76,7 +76,7 @@ public class Library extends Building implements LibraryRequirements {
    * @return boolean corresponding to if title is in library
    */
   public boolean containsTitle(String title) {
-    return collection.contains(title);
+    return collection.containsKey(title);
   }
 
   /**

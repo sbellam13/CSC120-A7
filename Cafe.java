@@ -31,6 +31,9 @@ public class Cafe extends Building implements CafeRequirements{
      * @param creams
      */
     public void sellCoffee(int size, int sugarPackets, int creams){
+        if(size > nCoffeeOunces || sugarPackets > nSugarPackets || creams >= nCreams || nCups < 1){
+            restock(size, sugarPackets, creams, 1);
+        }
         nCoffeeOunces -= size;
         nSugarPackets -= sugarPackets;
         nCreams -= creams;
